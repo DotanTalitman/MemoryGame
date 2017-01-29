@@ -1,0 +1,80 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#player {
+    background: blue;
+    width: 100px;
+    height: 50px;
+    transition: 0.5s;
+}
+
+#board {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+   
+    
+}
+
+.square {
+    border: 1px solid black;
+    width: 33%;
+    height: 33%;
+    cursor: pointer;
+    background: yellow;
+    transition: 1s;
+    color: yellow;
+    position: relative;
+}
+
+.flip {
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    background: red;
+    color: #fff!important;
+    font-size: 50px;
+    text-shadow: 3px 4px 5px black;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.match{
+  -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    background: green;
+    color: #fff!important;
+    font-size: 50px;
+    font-weight: 800;
+    text-shadow: 3px 4px 5px black;
+}
+
+
+
+@keyframes win-animation {
+    0%   {background-color: chartreuse;}
+    25%  {background-color: cadetblue;}
+    50%  {background-color: chocolate;}
+    100% {background-color: aqua;}
+}
+
+/* The element to apply the animation to */
+.win {
+
+    background-color: red;
+    animation-name: win-animation;
+    animation-duration: 4s;
+}
